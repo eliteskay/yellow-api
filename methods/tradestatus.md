@@ -8,11 +8,11 @@ description: Returns status of trade
 
 **Headers**
 
-| Name         | Value                 |
-| ------------ | --------------------- |
-| Content-Type | `application/json`    |
-| Y\_API\_KEY  | `Public API Key`      |
-| Signature    | `HMAC SHA256 of Body` |
+| Name                         | Value                 |
+| ---------------------------- | --------------------- |
+| Content-Type                 | `application/json`    |
+| Y\_API\_KEY                  | `Public API Key`      |
+| [Signature](../signature.md) | `HMAC SHA256 of Body` |
 
 **Body**
 

@@ -10,15 +10,15 @@ description: Create new trade and returns trade info
 
 **Headers**
 
-| Name         | Value                 |
-| ------------ | --------------------- |
-| Content-Type | `application/json`    |
-| Y\_API\_KEY  | `Public API Key`      |
-| Signature    | `HMAC SHA256 of Body` |
+| Name                         | Value                 |
+| ---------------------------- | --------------------- |
+| Content-Type                 | `application/json`    |
+| Y\_API\_KEY                  | `Public API Key`      |
+| [Signature](../signature.md) | `HMAC SHA256 of Body` |
 
 **Body**
 
-<table><thead><tr><th>Name</th><th width="137">Type</th><th>Description</th></tr></thead><tbody><tr><td>send_name</td><td>string</td><td>Currency being sent</td></tr><tr><td>get_name</td><td>string</td><td>Currency being received</td></tr><tr><td>send_value</td><td>number</td><td>Exchange amount</td></tr><tr><td>send_network</td><td>string</td><td>Network of currency being sent</td></tr><tr><td>get_network</td><td>string</td><td>Network of currency being received</td></tr></tbody></table>
+<table><thead><tr><th>Name</th><th width="137">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>send_name</code></td><td>string</td><td>Currency being sent</td></tr><tr><td><code>get_name</code></td><td>string</td><td>Currency being received</td></tr><tr><td><code>send_value</code></td><td>number</td><td>Exchange amount</td></tr><tr><td><code>send_network</code></td><td>string</td><td>Network of currency being sent</td></tr><tr><td><code>get_network</code></td><td>string</td><td>Network of currency being received</td></tr></tbody></table>
 
 **Response**
 
