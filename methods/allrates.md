@@ -1,30 +1,82 @@
 ---
-description: Возвращает все возможные направления и курсы обмено
+description: Returns all possible exchange rates
 ---
 
 # allRates
 
-### Method
+<mark style="color:green;">`GET`</mark> `/trades/allRates`
 
-* GET
+**Headers**
 
-### Headers
+| Name         | Value              |
+| ------------ | ------------------ |
+| Content-Type | `application/json` |
+| Y\_API\_KEY  | `Public API Key`   |
 
-* Y\_API\_KEY: публичный API ключ
+**Response**
 
-### Пример
+{% tabs %}
+{% tab title="200" %}
+{% code overflow="wrap" fullWidth="false" %}
+```json
+{
+	"SBERRUB": {
+		"name": "Сбербанк",
+		"withdraw_networks": {
+			"RUB": 0
+		},
+		"min_withdraw": {
+			"RUB": 9000
+		},
+		"deposit_networks": {},
+		"min_deposit": {},
+		"to": {
+			"SOL": 0.009000000000000001,
+			"TON": 0.117,
+			"BCH": 0,
+			"XMR": 0.009000000000000001,
+			"LTC": 0.009000000000000001,
+			"DASH": 0.036000000000000004,
+			"VERSE": 4539.735,
+			"AVAX": 0.027,
+			"BTC": 0,
+			"MATIC": 1.557,
+			"DOGE": 7.029,
+			"DAI": 0.873,
+			"USDT": 0.882,
+			"USDC": 0.873,
+			"ETH": 0,
+			"TRX": 7.029,
+			"BNB": 0
+		}
+	},
+...
+```
+{% endcode %}
+{% endtab %}
 
-{% code overflow="wrap" lineNumbers="true" fullWidth="false" %}
+{% tab title="40X" %}
+```json
+{
+	"statusCode": 40X,
+	"message": "Some error message"
+}
+```
+{% endtab %}
+{% endtabs %}
+
+#### Example
+
+{% tabs %}
+{% tab title="JavaScript Fetch" %}
 ```javascript
 const fetch = require('node-fetch');
 
-let url = 'https://localhost:3000/trades/allRates';
+let url = '/trades/allRates';
 
 let options = {
   method: 'GET',
-  headers: {
-    Y_API_KEY: 'публичный API ключ',
-  }
+  headers: {'Content-Type': 'application/json', Y_API_KEY: 'Your API Key'}
 };
 
 fetch(url, options)
@@ -32,5 +84,49 @@ fetch(url, options)
   .then(json => console.log(json))
   .catch(err => console.error('error:' + err));
 ```
-{% endcode %}
+{% endtab %}
 
+{% tab title="JavaScript Axios" %}
+```javascript
+import axios from "axios";
+
+const options = {
+  method: 'GET',
+  url: 'https://localhost:3000/trades/allRates',
+  headers: {'Content-Type': 'application/json', Y_API_KEY: 'Your API Key'}
+};
+
+axios.request(options).then(function (response) {
+  console.log(response.data);
+}).catch(function (error) {
+  console.error(error);
+});
+```
+{% endtab %}
+
+{% tab title="Python" %}
+```python
+import requests
+
+url = "/trades/allRates"
+
+headers = {
+    "Content-Type": "application/json",
+    "Y_API_KEY": "Your API Key"
+}
+
+response = requests.request("GET", url, headers=headers)
+
+print(response.text)
+```
+{% endtab %}
+
+{% tab title="cURL" %}
+```sh
+curl --request GET \
+  --url /trades/allRates \
+  --header 'Content-Type: application/json' \
+  --header 'Y_API_KEY: qweqwe'
+```
+{% endtab %}
+{% endtabs %}

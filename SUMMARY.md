@@ -5,5 +5,5 @@
   * [allRates](methods/allrates.md)
   * [destinationsList](methods/destinationslist.md)
   * [ratesInDirection](methods/ratesindirection.md)
-  * [createTrade](methods/createtrade.md)
   * [tradeStatus](methods/tradestatus.md)
+  * [createTrade](methods/createtrade.md)
