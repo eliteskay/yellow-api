@@ -6,8 +6,6 @@ description: Create new trade and returns trade info
 
 <mark style="color:green;">`POST`</mark> `/trades/createTrade`
 
-\<Description of the endpoint>
-
 **Headers**
 
 | Name                         | Value                 |
