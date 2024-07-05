@@ -1,5 +1,5 @@
 ---
-description: Returns status of trade
+description: Returns all information about transaction
 ---
 
 # getInfo
