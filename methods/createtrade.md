@@ -18,7 +18,7 @@ description: Create new trade and returns trade info
 
 **Body**
 
-<table><thead><tr><th>Name</th><th width="137">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>send_name</code></td><td>string</td><td>Currency being sent</td></tr><tr><td><code>get_name</code></td><td>string</td><td>Currency being received</td></tr><tr><td><code>send_value</code></td><td>number</td><td>Exchange amount</td></tr><tr><td><code>send_network</code></td><td>string</td><td>Network of currency being sent</td></tr><tr><td><code>get_network</code></td><td>string</td><td>Network of currency being received</td></tr></tbody></table>
+<table><thead><tr><th width="270">Name</th><th width="100">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>send_name</code></td><td>string</td><td>Currency being sent</td></tr><tr><td><code>get_name</code></td><td>string</td><td>Currency being received</td></tr><tr><td><code>send_network</code></td><td>string</td><td>Network of currency being sent</td></tr><tr><td><code>get_network</code></td><td>string</td><td>Network of currency being received</td></tr><tr><td><code>send_value</code> or <code>get_value</code></td><td>number</td><td>Amount of the exchange you will receive or pay</td></tr><tr><td><code>get_creds</code></td><td>string</td><td>Сredentials</td></tr></tbody></table>
 
 **Response**
 
@@ -26,25 +26,20 @@ description: Create new trade and returns trade info
 {% tab title="200" %}
 ```json
 {
-	"id": 4,
 	"send_name": "USDT",
-	"get_name": "SBERRUB",
-	"send_value": 1200,
-	"get_value": 93591.1,
 	"send_network": "TRC20",
-	"get_network": "RUB",
+	"get_network": "ERC20",
 	"uniq_id": "0sv0c0c02da105aa6b7fbzf1zv05444d8a0ccd4c",
-	"date": "2024-07-02T20:35:39.406Z",
 	"status": 1,
-	"course": 77.994,
-	"commission_amount": 0.1,
-	"our_commission_amount": 0.5,
-	"time_expire": "171995253939321600000",
-	"txLink": null,
-	"createdBy": 1,
-	"payment_wallet": "",
-	"userPaidHash": "some hash",
-	"ourHash": "some hash"
+	"payment_wallet": "WalletForPay",
+	"userPaidHash": "someHash",
+	"ourHash": "someHash",
+	"get_creds": "WalletForRecive",
+	"network_commission": 0,
+	"date": 1720120863,
+	"time_expire": 1720142463,
+	"send_value": "112",
+	"get_value": "100"
 }
 ```
 {% endtab %}

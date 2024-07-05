@@ -4,6 +4,6 @@
   * [allRates](methods/allrates.md)
   * [destinationsList](methods/destinationslist.md)
   * [ratesInDirection](methods/ratesindirection.md)
-  * [tradeStatus](methods/tradestatus.md)
+  * [getInfo](methods/tradestatus.md)
   * [createTrade](methods/createtrade.md)
 * [Signature](signature.md)

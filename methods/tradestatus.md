@@ -2,9 +2,9 @@
 description: Returns status of trade
 ---
 
-# tradeStatus
+# getInfo
 
-<mark style="color:green;">`GET`</mark> `/trades/tradeStatus`
+<mark style="color:green;">`GET`</mark> `/trades/getInfo`
 
 **Headers**
 
@@ -24,12 +24,25 @@ description: Returns status of trade
 
 {% tabs %}
 {% tab title="200" %}
-```json
-{
-	"status": 1, // or another status code and message
-	"message": "Awaiting payment from the customer"
+<pre class="language-json"><code class="lang-json"><strong>{
+</strong>	"send_name": "USDT",
+	"send_network": "TRC20",
+	"get_network": "ERC20",
+	"uniq_id": "0sv0c0c02da105aa6b7fbzf1zv05444d8a0ccd4c",
+	"status": 1,
+	"payment_wallet": "WalletForPay",
+	"userPaidHash": "someHash",
+	"ourHash": "someHash",
+	"get_creds": "WalletForRecive",
+	"network_commission": 0,
+	"date": 1720120863,
+	"time_expire": 1720142463,
+	"send_value": "112",
+	"get_value": "100"
 }
-```
+
+
+</code></pre>
 {% endtab %}
 
 {% tab title="40X" %}
