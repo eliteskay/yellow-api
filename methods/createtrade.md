@@ -16,7 +16,7 @@ description: Create new trade and returns trade info
 
 **Body**
 
-<table><thead><tr><th width="270">Name</th><th width="100">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>send_name</code></td><td>string</td><td>Currency being sent</td></tr><tr><td><code>get_name</code></td><td>string</td><td>Currency being received</td></tr><tr><td><code>send_network</code></td><td>string</td><td>Network of currency being sent</td></tr><tr><td><code>get_network</code></td><td>string</td><td>Network of currency being received</td></tr><tr><td><code>send_value</code> or <code>get_value</code></td><td>number</td><td>Amount of the exchange you will receive or pay</td></tr><tr><td><code>get_creds</code></td><td>string</td><td>Сredentials</td></tr></tbody></table>
+<table><thead><tr><th width="270">Name</th><th width="100">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>send_name</code></td><td>string</td><td>Currency being sent</td></tr><tr><td><code>get_name</code></td><td>string</td><td>Currency being received</td></tr><tr><td><code>send_network</code></td><td>string</td><td>Network of currency being sent</td></tr><tr><td><code>get_network</code></td><td>string</td><td>Network of currency being received</td></tr><tr><td><code>send_value</code> or <code>get_value</code></td><td>number</td><td>Amount of the exchange you will receive or pay</td></tr><tr><td><code>get_creds</code></td><td>string</td><td>Сredentials</td></tr><tr><td><code>uniq_id</code> o<em>ptional</em></td><td>strung</td><td>Unique id of trade</td></tr></tbody></table>
 
 If you pass `send_value` and `get_value` parameters at once, the amount payable will be automatically calculated so that you get an amount from **get\_value**.
 
@@ -63,7 +63,7 @@ If you pass `send_value` and `get_value` parameters at once, the amount payable 
 ```javascript
 const fetch = require('node-fetch');
 
-let url = 'https://localhost:3000/trades/createTrade';
+let url = 'https://api.yellowchanger.com/trades/createTrade';
 
 let options = {
   method: 'POST',
@@ -88,7 +88,7 @@ var axios = require("axios").default;
 
 var options = {
   method: 'POST',
-  url: '/trades/createTrade',
+  url: 'https://api.yellowchanger.com/trades/createTrade',
   headers: {
     'Content-Type': 'application/json',
     Y_API_KEY: 'Your API Key',
@@ -115,7 +115,7 @@ axios.request(options).then(function (response) {
 ```python
 import requests
 
-url = "https://localhost:3000/trades/createTrade"
+url = "https://api.yellowchanger.com/trades/createTrade"
 
 payload = {
     "send_name": "USDT",
@@ -139,7 +139,7 @@ print(response.text)
 {% tab title="cURL" %}
 ```bash
 curl --request POST \
-  --url /trades/createTrade \
+  --url https://api.yellowchanger.com/trades/createTrade \
   --header 'Content-Type: application/json' \
   --header 'Signature: 0002b135569a4a29b7e7bf9489114eca8fa31e7f61a9e8e26b89bb7dfd4dcf5c' \
   --header 'Y_API_KEY: Your API Key' \

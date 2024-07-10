@@ -77,7 +77,7 @@ const options = {
   body: 'false'
 };
 
-fetch('/trades/destinationsList', options)
+fetch('https://api.yellowchanger.com/trades/destinationsList', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -90,7 +90,7 @@ import axios from "axios";
 
 const options = {
   method: 'GET',
-  url: '/trades/destinationsList',
+  url: 'https://api.yellowchanger.com/trades/destinationsList',
   headers: {'Content-Type': 'application/json', Y_API_KEY: 'Your API Key'}
 };
 
@@ -106,7 +106,7 @@ axios.request(options).then(function (response) {
 ```python
 import requests
 
-url = "/trades/destinationsList"
+url = "https://api.yellowchanger.com/trades/destinationsList"
 
 headers = {
     "Content-Type": "application/json",
@@ -122,7 +122,7 @@ print(response.text)
 {% tab title="cURL" %}
 ```bash
 curl --request GET \
-  --url /trades/destinationsList \
+  --url https://api.yellowchanger.com/trades/destinationsList \
   --header 'Content-Type: application/json' \
   --header 'Y_API_KEY: Your API Key'
 ```

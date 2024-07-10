@@ -72,7 +72,7 @@ description: Returns all possible exchange rates
 ```javascript
 const fetch = require('node-fetch');
 
-let url = '/trades/allRates';
+let url = 'https://api.yellowchanger.com/trades/allRates';
 
 let options = {
   method: 'GET',
@@ -92,7 +92,7 @@ import axios from "axios";
 
 const options = {
   method: 'GET',
-  url: 'https://localhost:3000/trades/allRates',
+  url: 'https://api.yellowchanger.com/trades/allRates',
   headers: {'Content-Type': 'application/json', Y_API_KEY: 'Your API Key'}
 };
 
@@ -108,7 +108,7 @@ axios.request(options).then(function (response) {
 ```python
 import requests
 
-url = "/trades/allRates"
+url = "https://api.yellowchanger.com/trades/allRates"
 
 headers = {
     "Content-Type": "application/json",
@@ -124,7 +124,7 @@ print(response.text)
 {% tab title="cURL" %}
 ```sh
 curl --request GET \
-  --url /trades/allRates \
+  --url https://api.yellowchanger.com/trades/allRates \
   --header 'Content-Type: application/json' \
   --header 'Y_API_KEY: qweqwe'
 ```

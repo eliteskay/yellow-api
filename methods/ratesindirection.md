@@ -115,7 +115,7 @@ const options = {
   body: '{"direction":"USDT"}'
 };
 
-fetch('/trades/ratesInDirection', options)
+fetch('https://api.yellowchanger.com/trades/ratesInDirection', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -128,7 +128,7 @@ import axios from "axios";
 
 const options = {
   method: 'GET',
-  url: '/trades/ratesInDirection',
+  url: 'https://api.yellowchanger.com/trades/ratesInDirection',
   headers: {
     'Content-Type': 'application/json',
     Y_API_KEY: 'Your API Key',
@@ -149,7 +149,7 @@ axios.request(options).then(function (response) {
 ```python
 import requests
 
-url = "/trades/ratesInDirection"
+url = "https://api.yellowchanger.com/trades/ratesInDirection"
 
 payload = {"direction": "USDT"}
 headers = {
@@ -167,7 +167,7 @@ print(response.text)
 {% tab title="cURL" %}
 ```bash
 curl --request GET \
-  --url /trades/ratesInDirection \
+  --url https://api.yellowchanger.com/trades/ratesInDirection \
   --header 'Content-Type: application/json' \
   --header 'Signature: 02fe657ed8405c521fb3d5e3fd9ef7ff92f849c9ab976dcbe25e6ec4aacae0ed' \
   --header 'Y_API_KEY: Your API Key' \
