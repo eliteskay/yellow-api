@@ -72,7 +72,7 @@ let options = {
     Y_API_KEY: 'Your API Key',
     Signature: '0002b135569a4a29b7e7bf9489114eca8fa31e7f61a9e8e26b89bb7dfd4dcf5c'
   },
-  body: '{"send_name":"USDT","get_name":"USDT","send_value":100,"send_network":"TRC20","get_network":"ERC20", "uniq_id":"nf4i3rh394h"}'
+  body: '{"send_name":"USDT","get_name":"USDT","send_value":100,"send_network":"TRC20","get_network":"ERC20", "uniq_id":"nf4i3rh394h", "get_creds":"address, card or number"}'
 };
 
 fetch(url, options)
@@ -100,7 +100,8 @@ var options = {
     send_value: 100,
     send_network: 'TRC20',
     get_network: 'ERC20', 
-    uniq_id: 'nf4i3rh394h'
+    uniq_id: 'nf4i3rh394h', 
+    get_creds: 'address, card or number'
   }
 };
 
@@ -124,8 +125,10 @@ payload = {
     "send_value": 100,
     "send_network": "TRC20",
     "get_network": "ERC20", 
-    "uniq_id": "nf4i3rh394h"
+    "uniq_id": "nf4i3rh394h",
+    "get_creds": "address, card or number"
 }
+
 headers = {
     "Content-Type": "application/json",
     "Y_API_KEY": "Your API Key",
@@ -145,7 +148,7 @@ curl --request POST \
   --header 'Content-Type: application/json' \
   --header 'Signature: 0002b135569a4a29b7e7bf9489114eca8fa31e7f61a9e8e26b89bb7dfd4dcf5c' \
   --header 'Y_API_KEY: Your API Key' \
-  --data '{"send_name": "USDT", "get_name": "USDT", "send_value": 100, "send_network": "TRC20", "get_network": "ERC20", "uniq_id": "nf4i3rh394h"}'
+  --data '{"send_name": "USDT", "get_name": "USDT", "send_value": 100, "send_network": "TRC20", "get_network": "ERC20", "uniq_id": "nf4i3rh394h", "get_creds": "address, card or number"}'
 ```
 {% endtab %}
 {% endtabs %}
