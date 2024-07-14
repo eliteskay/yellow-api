@@ -22,7 +22,7 @@ description: Returns all possible exchange destinations
     "payin": {
       "VERSE": [
         {
-          "network": "ETH",
+          "network": "ERC20",
           "limit": {
             "min_amount": "2500.00000000",
             "max_amount": "10000000.00000000"
@@ -31,7 +31,7 @@ description: Returns all possible exchange destinations
       ],
       "DAI": [
         {
-          "network": "ETH",
+          "network": "ERC20",
           "limit": {
             "min_amount": "1.00000000",
             "max_amount": "10000000.00000000"
@@ -45,7 +45,7 @@ description: Returns all possible exchange destinations
           }
         },
         {
-          "network": "BSC",
+          "network": "BEP20",
           "limit": {
             "min_amount": "1.00000000",
             "max_amount": "10000000.00000000"
