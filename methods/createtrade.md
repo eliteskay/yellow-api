@@ -16,7 +16,7 @@ description: Create new trade and returns trade info
 
 **Body**
 
-<table><thead><tr><th width="270">Name</th><th width="100">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>send_name</code></td><td>string</td><td>Currency being sent</td></tr><tr><td><code>get_name</code></td><td>string</td><td>Currency being received</td></tr><tr><td><code>send_network</code></td><td>string</td><td>Network of currency being sent</td></tr><tr><td><code>get_network</code></td><td>string</td><td>Network of currency being received</td></tr><tr><td><code>send_value</code> or <code>get_value</code></td><td>number</td><td>Amount of the exchange you will receive or pay</td></tr><tr><td><code>get_creds</code></td><td>string</td><td>Сredentials</td></tr><tr><td><code>uniq_id</code> o<em>ptional</em></td><td>strung</td><td>Unique id of trade</td></tr></tbody></table>
+<table><thead><tr><th width="270">Name</th><th width="100">Type</th><th>Description</th></tr></thead><tbody><tr><td><code>send_name</code></td><td>string</td><td>Currency being sent</td></tr><tr><td><code>get_name</code></td><td>string</td><td>Currency being received</td></tr><tr><td><code>send_network</code></td><td>string</td><td>Network of currency being sent</td></tr><tr><td><code>get_network</code></td><td>string</td><td>Network of currency being received</td></tr><tr><td><code>send_value</code> or <code>get_value</code></td><td>number</td><td>Amount of the exchange you will receive or pay</td></tr><tr><td><code>get_creds</code></td><td>string</td><td>Сredentials</td></tr><tr><td><code>uniq_id</code> o<em>ptional</em></td><td>strung</td><td>Unique id of trade</td></tr><tr><td><code>sbpBank</code> <em>only when get_network is SBPRUB</em></td><td><a data-footnote-ref href="#user-content-fn-1">string</a></td><td>Bank for transfer via SBP</td></tr></tbody></table>
 
 If you pass `send_value` and `get_value` parameters at once, the amount payable will be automatically calculated so that you get an amount from **get\_value**.
 
@@ -153,3 +153,6 @@ curl --request POST \
 {% endtab %}
 {% endtabs %}
 
+
+
+[^1]: Acceptable values: sbppsb, sbpakbars, sbprnkb, sbpotp, sbpozon, sbpmtc, sbppochtabank, sbpumoney, sbptinkoff, sbpsber, sbpraif, sbpalfa, sbpotkritie, sbpvtb, sbpsovkombank, sbpgazprom, sbprosbank
