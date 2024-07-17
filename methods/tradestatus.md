@@ -69,7 +69,7 @@ const options = {
   body: '{"uniq_id":"0sv0c0c02da105aa6b7fbzf1zv05444d8a0ccd4c"}'
 };
 
-fetch('https://api.yellowchanger.com/trades/tradeStatus', options)
+fetch('https://api.yellowchanger.com/trades/getInfo', options)
   .then(response => response.json())
   .then(response => console.log(response))
   .catch(err => console.error(err));
@@ -82,7 +82,7 @@ import axios from "axios";
 
 const options = {
   method: 'GET',
-  url: 'https://api.yellowchanger.com/trades/tradeStatus',
+  url: 'https://api.yellowchanger.com/trades/getInfo',
   headers: {
     'Content-Type': 'application/json',
     Y_API_KEY: 'Your API Key',
@@ -103,7 +103,7 @@ axios.request(options).then(function (response) {
 ```python
 import requests
 
-url = "https://api.yellowchanger.com/trades/tradeStatus"
+url = "https://api.yellowchanger.com/trades/getInfo"
 
 payload = {"uniq_id": "0sv0c0c02da105aa6b7fbzf1zv05444d8a0ccd4c"}
 headers = {
@@ -121,7 +121,7 @@ print(response.text)
 {% tab title="cURL" %}
 ```bash
 curl --request GET \
-  --url https://api.yellowchanger.com/trades/tradeStatus \
+  --url https://api.yellowchanger.com/trades/getInfo\
   --header 'Content-Type: application/json' \
   --header 'Signature: e4ae46c268b77ad7fb7d12da1eeb8ad3218779c52c926c63407971da7537848e' \
   --header 'Y_API_KEY: Your API Key' \
