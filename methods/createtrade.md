@@ -31,7 +31,7 @@ If you pass `send_value` and `get_value` parameters at once, the amount payable 
 	"send_name": "USDT",
 	"send_network": "TRC20",
 	"get_network": "ERC20",
-	"uniq_id": "0sv0c0c02da105aa6b7fbzf1zv05444d8a0ccd4c",
+	"uniq_id": "nf4i3rh394h",
 	"status": 1,
 	"payment_wallet": "WalletForPay",
 	"userPaidHash": "someHash",
